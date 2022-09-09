@@ -14,29 +14,34 @@
 <body>
     <div class="container mt-5 w-50">
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="exampleInputEmail1" class="form-label">Name</label> <span class="text-danger">*</span>
+            <input placeholder="Please enter your name" type="text" class="form-control" id="name"
+                id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="nameAlert" class="alert alert-danger">Please start the name with capital letter </div>
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Profession</label>
-            <input id="profession" type="text" class="form-control" id="exampleInputPassword1">
+            <input id="profession" placeholder="Please Add your profession" type="text" class="form-control"
+                id="exampleInputPassword1">
         </div>
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Salary</label>
-            <input id="salary" type="number" class="form-control" id="exampleInputPassword1">
+            <label for="exampleInputPassword1" class="form-label">Salary</label> <span class="text-danger">*</span>
+            <input id="salary" placeholder="Enter your salary" type="number" class="form-control"
+                id="exampleInputPassword1">
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Describtion</label>
-            <textarea id="describtion" class="form-control" id="exampleInputPassword1"></textarea>
+            <textarea id="describtion" placeholder="Enter a brief describtion about yourself" class="form-control"
+                id="exampleInputPassword1"></textarea>
         </div>
 
-        <button type="button" id="click" class="btn btn-outline-primary">Add</button>
-        <button type="clear" class="btn btn-outline-danger">Clear</button>
+        <button disabled type="button" id="click" class="btn btn-outline-primary">Add</button>
+        <button type="clear" id="clear" disabled class="btn btn-outline-danger">Clear</button>
 
         <div class="d-block mt-5 mb-3">
             <button type="button" id="deleteAll" class="btn btn-danger">Delete all</button>
         </div>
-        
+
         <input type="search" onkeyup="search(this)" placeholder="Search ...." class="form-control">
 
         <table class="table my-5">
@@ -63,6 +68,9 @@
 
     <script src="js/app.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 </body>
 
 
